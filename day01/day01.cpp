@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <numeric>
@@ -31,7 +32,7 @@ int main(int n_args, char* args[]) {
 
     std::sort(data.begin(), data.end());
     std::cout << "part 1: " << data.back() << std::endl;
-    
+
     int sum_of_three_highest = std::accumulate(data.end()-3, data.end(), 0);
     std::cout << "part 2: " << sum_of_three_highest << std::endl;
 }
